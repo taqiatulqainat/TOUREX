@@ -1,0 +1,86 @@
+/* Background container */
+.signup-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* center vertically + horizontally */
+  background: url("../assets/mount4.jpg") no-repeat center center/cover;
+   padding-left: 80px; 
+  font-family: 'Inter', sans-serif;
+}
+
+/* Form wrapper */
+.form-box {
+    max-width: 400px;
+  color: #E9EAEB;
+}
+
+/* Top text */
+.top-text {
+  color: #A4A7AE;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Main heading */
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #E9EAEB;
+}
+
+/* Sub text */
+.sub-text {
+  font-size: 14px;
+  color: #A4A7AE;
+  margin-bottom: 20px;
+}
+
+.login-link {
+  color: #7F56D9;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Row for first/last name */
+.input-row {
+  display: flex;
+  gap: 15px;
+}
+
+/* Inputs */
+.signup-form input {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #535862;
+  border-radius: 8px;
+  color: #D5D7DA;
+  font-size: 14px; /* same for all inputs */
+}
+
+.signup-form input::placeholder {
+  color: #D5D7DA;
+}
+
+/* Button */
+.create-btn {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #7F56D9;
+  color: #E9EAEB;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}

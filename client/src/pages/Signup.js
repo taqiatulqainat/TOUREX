@@ -1,39 +1,108 @@
+
 import React, { useState } from "react";
 import axios from "axios";
+import "./Signup.css";
+
 
 const Signup = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+
+  const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (form.password !== form.confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+    setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/signup", { name, email, password });
-      alert(res.data.message); // Success message
+      // backend expects: name, email, password
+      const res = await axios.post("http://localhost:5000/api/auth/signup", {
+        name: `${form.firstName} ${form.lastName}`.trim(),
+        email: form.email,
+        password: form.password,
+      });
+      alert(res?.data?.message || "Signup successful");
     } catch (err) {
-      alert(err.response.data.message || "Signup failed");
+      alert(err?.response?.data?.message || "Signup failed");
+    } finally {
+      setLoading(false);
     }
   };
+  
 
   return (
-    <div style={{ maxWidth: "400px", margin: "50px auto" }}>
-      <h2>Signup</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </div>
-        <button type="submit">Signup</button>
-      </form>
+    <div className="signup-container">
+      <div className="form-box">
+        <p className="top-text">START FOR FREE</p>
+        <h1 className="heading">Create new account</h1>
+        <p className="sub-text">
+          Already a member? <a href="/login" className="login-link">Log In</a>
+        </p>
+
+        <form className="signup-form" onSubmit={handleSubmit}>
+          <div className="input-row">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              value={form.firstName}
+              onChange={onChange}
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={form.lastName}
+              onChange={onChange}
+              required
+            />
+          </div>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={onChange}
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={form.password}
+            onChange={onChange}
+            required
+          />
+
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            value={form.confirmPassword}
+            onChange={onChange}
+            required
+          />
+
+          <button type="submit" className="create-btn" disabled={loading}>
+            {loading ? "Creating..." : "Create Account"}
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

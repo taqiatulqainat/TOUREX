@@ -1,0 +1,72 @@
+/* Background container */
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: url("../assets/mount4flip.jpg") no-repeat center center/cover;
+  padding-right: 200px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Form wrapper */
+.form-box {
+  width: 400px;
+  color: #E9EAEB;
+}
+
+/* Heading */
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #E9EAEB;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.login-form input {
+    flex: 1;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid #535862;
+  border-radius: 8px;
+  color: #D5D7DA;
+  font-size: 14px;
+}
+
+.login-form input::placeholder {
+  color: #D5D7DA;
+}
+
+/* Sub text */
+.sub-text {
+  font-size: 14px;
+  color: #A4A7AE;
+  margin: 10px 0 20px;
+  text-align: left;
+}
+
+.signup-link {
+  color: #7F56D9;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Button */
+.login-btn {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #7F56D9;
+  color: #E9EAEB;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
