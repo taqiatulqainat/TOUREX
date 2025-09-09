@@ -1,0 +1,181 @@
+.dining {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 60px 80px;
+  background: #F5EFEB;
+}
+
+.dining-left {
+  flex: 1;
+}
+
+.dining-left h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2F4157;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.dining-left span {
+  color: #577C8E;
+}
+
+.dining-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.dining-btn {
+  /* background: #36566f;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease; */
+  
+  display: inline-block;
+  background: #2F4157;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dining-btn:hover {
+  /* background: #223745; */
+  
+  background: #2F4157;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* Right collage */
+.dining-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+
+.dining-card {
+  position: relative;
+  display: block;
+  max-width: 280px;
+}
+
+.dining-card img {
+  width: 100%;
+  border: 3px solid #fff;
+  display: block;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+  /* position: relative; */
+  width: 200px;
+  height: 140px;
+}
+
+.dining-card .badge1 {
+  position: absolute;
+  top: 8px;
+  right: 58px;
+  background: #333;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+
+.dining-card .badge2 {
+  position: absolute;
+  top: 35px;
+  left: 1px;
+  background: #333;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+
+.dining-card .badge3 {
+  position: absolute;
+  bottom: 8px;
+  left: 190px;
+  background: #333;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+/* Notes beside the images */
+.caption {
+  position: absolute;
+  width: 130px;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.caption.top {
+  left: 220px;
+  top: 20%;
+}
+
+.caption.center {
+  right: 300px;
+  top: 40%;
+}
+
+.caption.bottom {
+  left: 220px;
+  top: 50%;
+}
+
+/* Slight rotations like collage */
+.dining-card.top {
+  transform: rotate(-3deg);
+  margin-left: 120px;
+  margin-top: 10px;
+}
+
+.dining-card.middle {
+  transform: rotate(2deg);
+  margin-left: 220px;
+  margin-top: -80px;
+}
+
+.dining-card.bottom {
+  transform: rotate(-2deg);
+  margin-left: 90px;
+  margin-top: -90px;
+}
+
+/* 
+
+.imgd1{
+    width: 100px;
+    height: 100px;
+}
+
+.imgd2{
+    top: 70; right: 10;
+    width: 100px;
+    height: 100px;
+}
+
+.imgd3{
+    bottom: 20; left: 10;
+    width: 50px;
+    height: 50px;
+} */

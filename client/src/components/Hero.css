@@ -1,0 +1,100 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  /* background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out forwards; */
+}
+
+
+
+/* hero slider addition */
+/* may be remove later */
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  width: 300%; /* since we have 3 images */
+  transition: transform 1s ease-in-out;
+  z-index: -1;
+}
+
+/* Each slide */
+.hero-slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+
+/* Dark overlay for better text visibility */
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  color: white;
+}
+
+.hero-overlay h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-overlay .highlight {
+  color: #2d3748; /* dark navy */
+  background-color: #fff;
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+.hero-overlay p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #357abd;
+}
+
+.btn-dark {
+  background-color: #2d3748;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-dark:hover {
+  background-color: #1a202c;
+}

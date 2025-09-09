@@ -1,0 +1,159 @@
+/* Global Reset (if not already added) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden; /* prevent horizontal scroll */
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Container */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F5EFEB;
+  padding: 10px 5%; /* responsive padding */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 10px; /* spacing when wrapped */
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 40px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* center if wrapped */
+  flex: 1; /* take available space */
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-links li a:hover {
+  color: #1a1a1a;
+}
+
+/* Actions - Right Side */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* wrap if needed */
+}
+
+/* Buttons */
+.btn-dark {
+  background-color: #2d3748;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap; /* prevent button text from breaking */
+}
+
+.btn-dark:hover {
+  background-color: #1a202c;
+}
+
+.btn-outline {
+  border: 1px solid #2d3748;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #2d3748;
+  background-color: white;
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  background-color: #f0f0f0;
+}
+
+/* Profile Image */
+/* Add space between List Business and Profile */
+.navbar-actions .profile-link {
+  margin-left: 12px; /* increase space from previous button */
+  display: inline-block;
+  border-radius: 50%; /* circular border */
+  padding: 2px; /* border padding */
+  border: 2px solid #2d3748; /* circle border color */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-actions .profile-link:hover {
+  transform: scale(1.05); /* slight zoom on hover */
+}
+
+/* Ensure profile image stays circular */
+.profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* .profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  flex-shrink: 0; /* prevent shrinking *
+} */
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-links {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .navbar-actions {
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}
