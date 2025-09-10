@@ -1,11 +1,11 @@
 import React from "react";
 
-const Profile = () => {
+const Itinerary = () => {
     return(
         <h1>
-            Profile page
+            Itinerary page
         </h1>
     );
 };
 
-export default Profile;
+export default Itinerary;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import Logo from "../assets/TourexLogo1.png";
+import Logo from "../../../../assets/TourexLogo1.png";
 // import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 // import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 

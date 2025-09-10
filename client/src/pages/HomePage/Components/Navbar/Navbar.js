@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/TourexLogo1.png";
-import profile from "../assets/profile.png";
+
+import logo from "../../../../assets/TourexLogo1.png";
+import profile from "../../../../assets/profile.png";
 
 const Navbar = () => {
   return (

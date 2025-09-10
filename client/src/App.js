@@ -1,14 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import About from "./pages/About";
-import TripPlan from "./pages/TripPlan";
-import ListBusiness from "./pages/ListBusiness";
-import Profile from "./pages/Profile";
-import Hotels from "./pages/Hotels";
+import Signup from "./pages/SignupPage/Signup"
+import Login from "./pages/LoginPage/Login";
+import Home from "./pages/HomePage/Home";
+import Services from "./pages/ServicesPage/Services";
+import About from "./pages/AboutPage/About";
+import TripPlan from "./pages/ItineraryPage/Itinerary";
+import Profile from "./pages/UserProfilePage/UserProfile";
+import Hotels from "./pages/HotelsPage/Hotels";
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
         <Route path="/hotels" element={<Hotels/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/tripplan" element={<TripPlan/>} />
-        <Route path="/listbusiness" element={<ListBusiness/>} />
         <Route path="/profile" element={<Profile/>} />
       </Routes>
     </Router>

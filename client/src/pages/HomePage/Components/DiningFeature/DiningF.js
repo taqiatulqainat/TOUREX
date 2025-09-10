@@ -60,9 +60,9 @@
 import React from "react";
 import "./DiningF.css";
 
-import Beef from "../assets/beef.jpg";
-import Pasta from "../assets/pasta.jpg";
-import Biryani from "../assets/biryani.jpg";
+import Beef from "../../../../assets/beef.jpg";
+import Pasta from "../../../../assets/pasta.jpg";
+import Biryani from "../../../../assets/biryani.jpg";
 
 const DiningF = () => {
   return (

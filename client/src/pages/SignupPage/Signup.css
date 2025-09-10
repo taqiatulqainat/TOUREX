@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start; /* center vertically + horizontally */
-  background: url("../assets/mount4.jpg") no-repeat center center/cover;
+  background: url("../../assets//mount4.jpg") no-repeat center center/cover;
    padding-left: 80px; 
   font-family: 'Inter', sans-serif;
 }

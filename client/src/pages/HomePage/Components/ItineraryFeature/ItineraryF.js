@@ -16,13 +16,13 @@ import "./ItineraryF.css";
 import { Link } from "react-router-dom";
 // import { FaWandMagicSparkles } from "react-icons/fa6";
 
-import profile from "../assets/profile2.jpg";
-import Resort from "../assets/resorts.jpg";
-import Beach from "../assets/beach.jpg";
-import WildLife from "../assets/wildlife.jpg";
-import FineDining from "../assets/finedining.jpg";
-import WaterSpots from "../assets/waterspots.jpg";
-import HistoricalTours from "../assets/historicaltours.jpg";
+import profile from "../../../../assets/profile2.jpg";
+import Resort from "../../../../assets/resorts.jpg";
+import Beach from "../../../../assets/beach.jpg";
+import WildLife from "../../../../assets/wildlife.jpg";
+import FineDining from "../../../../assets/finedining.jpg";
+import WaterSpots from "../../../../assets/waterspots.jpg";
+import HistoricalTours from "../../../../assets/historicaltours.jpg";
 
 
 

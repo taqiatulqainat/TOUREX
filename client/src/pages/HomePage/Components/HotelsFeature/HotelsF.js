@@ -1,11 +1,11 @@
 import React from "react";
 import "./HotelsF.css";
 
-import HotelRoom from "../assets/hotelroom.jpg";
-import ImgH1 from "../assets/imgh1.jpg";
-import ImgH2 from "../assets/imgh2.jpg";
-import ImgH3 from "../assets/imgh3.jpg";
-import ImgH4 from "../assets/imgh4.jpg";
+import HotelRoom from "../../../../assets/hotelroom.jpg";
+import ImgH1 from "../../../../assets/imgh1.jpg";
+import ImgH2 from "../../../../assets/imgh2.jpg";
+import ImgH3 from "../../../../assets/imgh3.jpg";
+import ImgH4 from "../../../../assets/imgh4.jpg";
 
 const HotelsF = () => {
   return (
