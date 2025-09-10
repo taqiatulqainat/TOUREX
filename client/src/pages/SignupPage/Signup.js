@@ -1,10 +1,12 @@
 
 import React, { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 import axios from "axios";
 import "./Signup.css";
 
 
 const Signup = () => {
+  const { signup } = useAuth();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -28,12 +30,31 @@ const Signup = () => {
     setLoading(true);
     try {
       // backend expects: name, email, password
-      const res = await axios.post("http://localhost:5000/api/auth/signup", {
-        name: `${form.firstName} ${form.lastName}`.trim(),
-        email: form.email,
-        password: form.password,
-      });
-      alert(res?.data?.message || "Signup successful");
+      // const res = await axios.post("http://localhost:5000/api/auth/signup", {
+      //   name: `${form.firstName} ${form.lastName}`.trim(),
+      //   email: form.email,
+      //   password: form.password,
+      // });
+      // alert(res?.data?.message || "Signup successful");
+
+    const res = await axios.post("http://localhost:5000/api/auth/signup", {
+      name: `${form.firstName} ${form.lastName}`.trim(),
+      email: form.email,
+      password: form.password,
+    });
+
+    // Save to localStorage
+    localStorage.setItem("token", res.data.token);
+    localStorage.setItem("user", JSON.stringify(res.data.user));
+
+    // Update UI (e.g., redirect to homepage)
+    window.location.href = "/";
+  
+
+
+      // const name = `${form.firstName} ${form.lastName}`.trim();
+      // await signup({ name, email: form.email, password: form.password });
+
     } catch (err) {
       alert(err?.response?.data?.message || "Signup failed");
     } finally {
