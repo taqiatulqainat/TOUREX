@@ -1,14 +1,95 @@
 
 
+// import React, { useState } from "react";
+// import { useAuth } from "../../context/AuthContext";
+// // import axios from "axios";
+// import "./Login.css";
+
+// const Login = () => {
+//   const { login } = useAuth();
+//   const [form, setForm] = useState({ email: "", password: "" });
+//   const [loading, setLoading] = useState(false);
+
+//   const handleChange = (e) => {
+//     setForm({ ...form, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setLoading(true);
+
+//     // try {
+//     //   await axios.post("http://localhost:5000/api/auth/login", form);
+//     //   alert("Login successful!");
+//     // } catch (err) {
+//     //   alert("Error: " + err.message);
+//     // }
+//     // setLoading(false);
+
+//     try {
+//       await login({ email: form.email, password: form.password });
+//       // after login AuthProvider navigates to home
+//     } catch (err) {
+//       alert(err.response?.data?.message || err.message || "Login failed");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   return (
+//     <div className="login-container">
+//       <div className="form-box">
+//         <h1 className="heading">Log In</h1>
+
+//         <form onSubmit={handleSubmit} className="login-form">
+//           <input
+//             type="email"
+//             name="email"
+//             placeholder="Email"
+//             value={form.email}
+//             onChange={handleChange}
+//             required
+//           />
+
+//           <input
+//             type="password"
+//             name="password"
+//             placeholder="Password"
+//             value={form.password}
+//             onChange={handleChange}
+//             required
+//           />
+
+//           <p className="sub-text">
+//             Don’t have an account? <a href="/signup" className="signup-link">Sign Up</a>
+//           </p>
+
+//           <button type="submit" className="login-btn" disabled={loading}>
+//             {loading ? "Logging in..." : "Log In"}
+//           </button>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Login;
+
+
+
 import React, { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
-// import axios from "axios";
 import "./Login.css";
+
+// 👇 Import your eye icons
+import EyeOpen from "../../assets/eye-open.png";
+import EyeClose from "../../assets/eye-close.png";
 
 const Login = () => {
   const { login } = useAuth();
   const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // 👈 new state
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,14 +98,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
-    // try {
-    //   await axios.post("http://localhost:5000/api/auth/login", form);
-    //   alert("Login successful!");
-    // } catch (err) {
-    //   alert("Error: " + err.message);
-    // }
-    // setLoading(false);
 
     try {
       await login({ email: form.email, password: form.password });
@@ -51,17 +124,27 @@ const Login = () => {
             required
           />
 
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={form.password}
-            onChange={handleChange}
-            required
-          />
+          {/* 👇 Password with eye icon */}
+          <div className="input-group password-group">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="Password"
+              value={form.password}
+              onChange={handleChange}
+              required
+            />
+            <img
+              src={showPassword ? EyeOpen : EyeClose}
+              alt="toggle password"
+              className="toggle-password"
+              onClick={() => setShowPassword(!showPassword)}
+            />
+          </div>
 
           <p className="sub-text">
-            Don’t have an account? <a href="/signup" className="signup-link">Sign Up</a>
+            Don’t have an account?{" "}
+            <a href="/signup" className="signup-link">Sign Up</a>
           </p>
 
           <button type="submit" className="login-btn" disabled={loading}>

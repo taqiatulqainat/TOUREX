@@ -11,7 +11,7 @@
 
 /* Form wrapper */
 .form-box {
-    max-width: 400px;
+    max-width: 380px;
   color: #E9EAEB;
 }
 
@@ -54,7 +54,7 @@
 /* Row for first/last name */
 .input-row {
   display: flex;
-  gap: 15px;
+  gap: 5px;
 }
 
 /* Inputs */
@@ -65,7 +65,7 @@
   border: 1px solid #535862;
   border-radius: 8px;
   color: #D5D7DA;
-  font-size: 14px; /* same for all inputs */
+  font-size: 13px; /* same for all inputs */
 }
 
 .signup-form input::placeholder {
@@ -83,4 +83,39 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+}
+
+
+/* Error messages */
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* Grouped inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Password toggle */
+.password-group {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.toggle-password:hover {
+  opacity: 1;
 }
