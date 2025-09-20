@@ -5,6 +5,7 @@ import ItineraryF from "./Components/ItineraryFeature/ItineraryF";
 import HotelsF from "./Components/HotelsFeature/HotelsF";
 import DiningF from "./Components/DiningFeature/DiningF";
 import Footer from "./Components/Footer/Footer";
+import TripPlan from "./Components/TripPlan/TripPlan";
 // import "./Home.css";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <ItineraryF/>
       <HotelsF/>
       <DiningF/>
+      <TripPlan/>
 
       <Footer/>
 
